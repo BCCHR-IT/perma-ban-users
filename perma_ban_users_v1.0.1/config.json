@@ -1,0 +1,30 @@
+{
+    "name": "PermaBanUsers",
+    "namespace": "BCCHR\\PermaBanUsers",
+    "description": "Permanently ban users from REDCap and prevent from being unsuspended via the User Rights page.",
+    "framework-version": 15,
+    "authors": [
+        {
+            "name": "Jordan Zhao",
+            "email": "jordan.zhao@bcchr.ca",
+            "institution": "BC Children's Hospital Research Institute"
+        }
+    ],
+    "system-settings": [
+        {
+        "key": "perma_ban_project_id",
+        "name": "PermaBan REDCap Project ID",
+        "type": "text",
+        "required": true
+        }
+    ],
+    "links": [
+        {
+            "name": "Manage PermaBan Users",
+            "url": "manage.php",
+            "icon": "fas fa-user-slash",
+            "super-users-only": true,
+            "show-header-and-footer": true
+        }
+    ]
+}
