@@ -146,6 +146,17 @@ function redcap_user_rights($project_id)
         }
 
     ...
+
+    if (!empty($user_suspended)) 
+	{
+		if (\ExternalModules\ExternalModules::isModuleEnabled('perma_ban_users')) {
+			if (in_array(strtolower($user_suspended), $banned)) {
+				echo "<div class='red'><b>Cannot unsuspend user '$user_suspended'. They are permanently banned.</b></div>";
+				return;
+			}
+		}
+    
+    ...
 } 
 ```
 
